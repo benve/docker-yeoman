@@ -1,7 +1,7 @@
 # Yeoman with some generators and prerequisites
 FROM debian:jessie
 
-MAINTAINER Jakub Głuszecki <jakub.gluszecki@gmail.com>
+MAINTAINER Giacomo Benvenuti <giacomo.benvenuti@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -14,7 +14,7 @@ RUN curl -sL https://deb.nodesource.com/setup | bash - && \
 
 RUN npm install -g npm@2.8.3 && \
     npm install -g yo@1.4.6 bower@1.4.1 grunt-cli@0.1.13 && \
-    npm install -g generator-webapp@0.5.1 generator-angular@0.11.1
+    npm install -g generator-webapp@0.5.1 generator-angular@0.11.1 generator-backbone@0.3.2
 
 # Add a yeoman user because grunt doesn't like being root
 RUN adduser --disabled-password --gecos "" yeoman && \
